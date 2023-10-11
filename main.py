@@ -19,9 +19,16 @@ def turn_counter_clockwise():
 def turn_clockwise():
     turt.right(10)
 
+
+def erase():
+    turt.clear()
+    turt.reset()
+
+
 screen.listen()
 screen.onkey(key="w", fun=move_forward)
 screen.onkey(key="s", fun=move_backward)
 screen.onkey(key="a", fun=turn_counter_clockwise)
 screen.onkey(key="d", fun=turn_clockwise)
+screen.onkey(key="c", fun=erase)
 screen.exitonclick()
